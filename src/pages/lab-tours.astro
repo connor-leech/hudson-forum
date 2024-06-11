@@ -1,0 +1,114 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeadingGrid from "../components/grid/HeadingGrid.astro";
+import IntroGrid from "../components/grid/IntroGrid.astro";
+import ParagraphCol from "../components/grid/row/col/ParagraphCol.astro";
+import ParagraphRow from "../components/grid/row/ParagraphRow.astro";
+---
+
+<Layout title="Lab tours - Hudson Forum">
+  <HeadingGrid>Lab tours</HeadingGrid>
+
+  <IntroGrid>
+    The day will include a tour of the newly renovated the Think Lab, one of the most advanced 5,400 square feet in the history of computing.
+  </IntroGrid>
+
+  <div class="content-grid cds--grid">
+    <div class="cds--row">
+      <div class="cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-16 cds--col-xlg-16 cds--col-max-16">
+        <a href="/lab-tours/01-yorktown.webp" data-fancybox="gallery">
+          <img class="possibly-4-3-ratio" src="/lab-tours/01-yorktown.webp" loading="lazy" />
+        </a>
+      </div>
+    </div>
+
+    <ParagraphRow title="Thomas J. Watson Research Center" lg={{ title: 4, slot: 8 }}>
+      The Thomas J. Watson Research Center in Yorktown Heights, NY is the global headquarters of IBM Research, the largest industrial research organization in the world. The facility, designed by Eero Saarinen and completed in 1961, is home to over 1,500 scientists, engineers, and designers inventing what’s next in computing. Many of IBM’s most notable technical breakthroughs in quantum computing, artificial intelligence, and semiconductors have taken place here.
+    </ParagraphRow>
+  </div>
+
+  <div class="content-grid cds--grid">
+    <div class="image-and-inline-paragraph-row cds--row">
+      <div class="cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-12 cds--col-xlg-12 cds--col-max-12">
+        <a href="/lab-tours/02-system-two.webp" data-fancybox="gallery">
+          <img class="possibly-4-3-ratio" src="/lab-tours/02-system-two.webp" loading="lazy" />
+        </a>
+      </div>
+
+      <div class="cds--col cds--col-sm-4 cds--col-md-4 cds--col-lg-4 cds--col-xlg-4 cds--col-max-4">
+        <a href="/lab-tours/03-system-two-straight.webp" data-fancybox="gallery">
+          <img src="/lab-tours/03-system-two-straight.webp" loading="lazy" />
+        </a>
+      </div>
+
+      <div id="heron-shot-col" class="cds--col cds--col-sm-4 cds--col-md-4 cds--col-lg-8 cds--offset-lg-2 cds--col-xlg-8 cds--offset-xlg-2 cds--col-max-8 cds--offset-max-2">
+        <a href="/lab-tours/04-heron.webp" data-fancybox="gallery">
+          <img class="a-4-3-ratio" src="/lab-tours/04-heron.webp" loading="lazy" />
+        </a>
+      </div>
+
+      <ParagraphCol title="Quantum System Two" inline>
+        The day will include a tour of our newly launched IBM Quantum System Two, the company’s first modular quantum computer and cornerstone of IBM’s quantum-centric supercomputing architecture.<br /><br />
+        Quantum System Two will contain a three-tiered chandelier capable of housing three quantum processors — all held within its scalable, hexagonal cryostat.
+      </ParagraphCol>
+    </div>
+  </div>
+
+  <div class="content-grid cds--grid">
+    <div class="image-and-inline-paragraph-row cds--row">
+      <div class="cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-8 cds--col-xlg-8 cds--col-max-8">
+        <a href="/lab-tours/05-system-one.webp" data-fancybox="gallery">
+          <img class="a-4-3-ratio" src="/lab-tours/05-system-one.webp" loading="lazy" />
+        </a>
+      </div>
+
+      <ParagraphCol title="Quantum System One" inline noMarginTopOnLg>
+        IBM Quantum System One is the world’s first fully integrated quantum system, introduced by IBM in January 2019. Inside, the quantum chip is held at a constant -273 degrees Celsius, a temperature colder than outer space.
+      </ParagraphCol>
+    </div>
+  </div>
+
+  <div class="content-grid cds--grid">
+    <div class="image-and-inline-paragraph-row cds--row">
+      <div class="cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-14 cds--col-xlg-14 cds--col-max-14">
+        <a href="/lab-tours/06-figures.webp" data-fancybox="gallery">
+          <img class="possibly-4-3-ratio possibly-16-9-ratio" src="/lab-tours/06-figures.webp" loading="lazy" />
+        </a>
+      </div>
+
+      <ParagraphCol title="Artificial Intelligence Unit" inline>
+        The Artificial Intelligence Unit cluster uses IBM’s system-on-chip designed to run and train deep learning models.
+      </ParagraphCol>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .image-and-inline-paragraph-row {
+    grid-row-gap: 2rem;
+  }
+
+  @media(min-width: 20rem) {
+    .possibly-4-3-ratio, .a-4-3-ratio {
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+  }
+
+  @media(min-width: 66rem) {
+    .possibly-4-3-ratio {
+      aspect-ratio: auto;
+      object-fit: fill;
+    }
+
+    .possibly-16-9-ratio {
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      object-position: 0 50%;
+    }
+
+    #heron-shot-col {
+      order: 99;
+    }
+  }
+</style>

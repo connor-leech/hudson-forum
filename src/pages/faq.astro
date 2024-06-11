@@ -1,0 +1,285 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeadingGrid from "../components/grid/HeadingGrid.astro";
+import FAQGrid from "../components/grid/FAQGrid.astro";
+import Line from "../components/Line.astro";
+
+import {
+  simpleFaqs,
+  simpleFaqs2,
+  simpleFaqs3,
+  nearbyAirports,
+  closestTrainStations,
+  taxisOrLimos,
+  reservedHotelRoomBlocks,
+  dinnerPlaces,
+} from "../meta/faq";
+---
+
+<Layout title="FAQ - Hudson Forum">
+  <HeadingGrid>FAQ</HeadingGrid>
+
+  <FAQGrid faqs={simpleFaqs} marginTop />
+
+  <div class="cds--grid">
+    <div class="cds--row">
+      <div class="line-col cds--col">
+        <Line stretch={false} subtle />
+      </div>
+    </div>
+  </div>
+
+  <div class="cds--grid">
+    <div class="cds--row">
+      <div class="cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-4 cds--col-xlg-4 cds--col-max-3">
+        <h3>Which airports are nearby?</h3>
+      </div>
+      <div class="cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-12 cds--col-xlg-12 cds--col-max-12 cds--offset-max-1">
+        <ul class="grid-list">
+          {nearbyAirports.map((airport) => (
+            <li>
+              <cds-link href={airport.url}>{airport.name}</cds-link>
+              <div>{airport.away}</div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cds--grid">
+    <div class="cds--row">
+      <div class="line-col cds--col">
+        <Line stretch={false} subtle />
+      </div>
+    </div>
+  </div>
+
+  <div class="cds--grid">
+    <div class="cds--row">
+      <div class="cds--col cds--col-sm-4 cds--col-md-4 cds--col-lg-4 cds--col-xlg-4 cds--col-max-3">
+        <h3>Can I take a train?</h3>
+      </div>
+      <div class="cds--col cds--col-sm-4 cds--col-md-4 cds--col-lg-8 cds--col-xlg-6 cds--col-max-6 cds--offset-max-1">
+        <p>Commuter trains from Grand Central Terminal in New York City are operated by Metro North. The train stations closest to the IBM Watson Research Center are:</p>
+        <ul class="with-marker">
+          {closestTrainStations.map((trainStation) => (
+            <li>
+              <cds-link href={trainStation.url}>{trainStation.name}</cds-link>
+              <div>{trainStation.line}, {trainStation.away}</div>
+            </li>
+          ))}
+        </ul>
+        <p>Taxi service is available from both stations.</p>
+        <br />
+        <cds-link href="https://new.mta.info/schedules?tab=mnr">Metro North schedule</cds-link>
+      </div>
+    </div>
+  </div>
+
+  <div class="cds--grid">
+    <div class="cds--row">
+      <div class="line-col cds--col">
+        <Line stretch={false} subtle />
+      </div>
+    </div>
+  </div>
+
+  <div class="cds--grid">
+    <div class="cds--row">
+      <div class="cds--col cds--col-sm-4 cds--col-md-4 cds--col-lg-4 cds--col-xlg-4 cds--col-max-3">
+        <h3>Local Taxi and limo services</h3>
+      </div>
+      <div class="cds--col cds--col-sm-4 cds--col-md-4 cds--col-lg-12 cds--col-xlg-12 cds--col-max-12 cds--offset-max-1">
+        <ul class="grid-list no-margin">
+          {taxisOrLimos.map((item) => (
+            <li>
+              {item.name}<br />
+              <cds-link href={`tel:${item.tel}`}>{item.tel}</cds-link>
+            </li>
+        ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cds--grid">
+    <div class="cds--row">
+      <div class="line-col cds--col">
+        <Line stretch={false} subtle />
+      </div>
+    </div>
+  </div>
+
+  <FAQGrid faqs={simpleFaqs2} />
+
+  <div class="cds--grid">
+    <div class="cds--row">
+      <div class="line-col cds--col">
+        <Line stretch={false} subtle />
+      </div>
+    </div>
+  </div>
+
+  <div class="cds--grid">
+    <div class="cds--row">
+      <div class="cds--col cds--col-sm-4 cds--col-md-4 cds--col-lg-4 cds--col-xlg-4 cds--col-max-3">
+        <h3>Is EV charging available?</h3>
+      </div>
+      <div class="cds--col cds--col-sm-4 cds--col-md-4 cds--col-lg-8 cds--col-xlg-6 cds--col-max-6 cds--offset-max-1">
+        <p>
+          If you anticipate needing to charge an EV, please contact us to reserve a spot at a charging station by emailing <cds-link href="mailto:hudson.forum@ibm.com">hudson.forum@ibm.com</cds-link>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cds--grid">
+    <div class="cds--row">
+      <div class="line-col cds--col">
+        <Line stretch={false} subtle />
+      </div>
+    </div>
+  </div>
+
+  <FAQGrid faqs={simpleFaqs3} />
+
+  <div class="cds--grid">
+    <div class="cds--row">
+      <div class="line-col cds--col">
+        <Line stretch={false} subtle />
+      </div>
+    </div>
+  </div>
+
+  <div class="cds--grid">
+    <div class="cds--row">
+      <div class="cds--col cds--col-sm-4 cds--col-md-4 cds--col-lg-0">
+        <h3>Are hotel room blocks available for the HF?</h3>
+      </div>
+
+      <div class="cds--col cds--col-sm-4 cds--col-md-4 cds--col-lg-0">
+        <p>Yes, we have reserved room blocks at three hotels. <cds-link href="/reserved-hotels">See here for more information.</cds-link> In addition to the three reserved hotels, here are some other nearby hotels:</p>
+      </div>
+
+      <div class="cds--col cds--col-sm-0 cds--col-md-0 cds--col-lg-4 cds--col-xlg-4 cds--col-max-3">
+        <h3>Are hotel room blocks available for the HF?</h3>
+      </div>
+
+      <div class="cds--col cds--col-sm-0 cds--col-md-0 cds--col-lg-8 cds--col-xlg-6 cds--col-max-6 cds--offset-max-1">
+        <p>Yes, we have reserved room blocks at three hotels. <cds-link href="/reserved-hotels">See here for more information.</cds-link> In addition to the three reserved hotels, here are some other nearby hotels:</p>
+      </div>
+
+      <div class="cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-8 cds--offset-lg-4 cds--col-xlg-12 cds--offset-xlg-4 cds--col-max-12 cds--offset-max-4">
+        <ul class="grid-list rooms">
+          {reservedHotelRoomBlocks.map((roomBlock) => (
+            <li>
+              <cds-link href={roomBlock.url}>{roomBlock.name}</cds-link>
+              <div>{roomBlock.away}</div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cds--grid">
+    <div class="cds--row">
+      <div class="line-col cds--col">
+        <Line stretch={false} subtle />
+      </div>
+    </div>
+  </div>
+
+  <div class="cds--grid">
+    <div class="cds--row">
+      <div class="cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-4 cds--col-xlg-4 cds--col-max-3">
+        <h3>Where can I go for dinner in the area?</h3>
+      </div>
+      <div class="cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-12 cds--col-xlg-12 cds--col-max-12 cds--offset-max-1">
+        <ul class="grid-list">
+          {dinnerPlaces.map((place) => (
+            <li>
+              <cds-link href={place.url}>{place.name}</cds-link>
+              <address>
+                {place.addressLine1}<br />
+                {place.addressLine2}
+              </address>
+              <cds-link href={`tel:${place.tel}`}>{place.tel}</cds-link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  ul.with-marker {
+    list-style-type: disc;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    flex-direction: column;
+  }
+
+  ul.with-marker li {
+    display: list-item;
+  }
+
+  ul.with-marker li::marker {
+    color: var(--cds-link-primary);
+  }
+
+  @media(min-width: 20rem) {
+    h3 {
+      margin-bottom: 1.5rem;
+    }
+
+    .line-col {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .grid-list {
+      flex-direction: column;
+      grid-row-gap: 1.5rem;
+    }
+
+    .grid-list.rooms {
+      margin-top: 1.5rem;
+    }
+  }
+
+  @media(min-width: 42rem) {
+    h3 {
+      margin-bottom: 0;
+    }
+
+    .line-col {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    .grid-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 3rem;
+      grid-column-gap: 2rem;
+      margin-top: 3rem;
+    }
+  }
+
+  @media(min-width: 66rem) {
+    .grid-list {
+      margin-top: 0;
+    }
+
+    .grid-list.rooms {
+      margin-top: 3rem;
+    }
+  }
+
+  .no-margin {
+    margin-top: 0;
+  }
+</style>

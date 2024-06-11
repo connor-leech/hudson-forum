@@ -1,0 +1,110 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeadingGrid from "../components/grid/HeadingGrid.astro";
+import Line from "../components/Line.astro";
+import type { Props } from "../components/grid/row/col/ParagraphCol.astro";
+import ParagraphRow from "../components/grid/row/ParagraphRow.astro";
+
+const lg: Props["lg"] = {
+  title: 6,
+  slot: 8,
+}
+---
+
+<Layout title="Hosts - Hudson Forum">
+  <HeadingGrid>Our hosts</HeadingGrid>
+
+  <div class="cds--grid">
+    <div class="cds--row">
+      <div class="cds--col">
+        <ul>
+          <img id="ibm" src="/hosts/ibm.svg" />
+          <img id="slmath" src="/hosts/slmath.svg" />
+          <img id="duality-group" src="/hosts/duality-group.svg" />
+        </ul>
+      </div>
+    </div>
+
+    <Line />
+  </div>
+
+  <div class="content-grid cds--grid">
+    <ParagraphRow title="IBM Research" lg={lg}>
+      <cds-link href="https://research.ibm.com/">IBM Research</cds-link> is a group of researchers, scientists, technologists, engineers, designers, and thinkers inventing what’s next in computing. Our goal is to be the engine of change for IBM, our partners, and the world at large. We’ve invested in 19 world-class research facilities spread across 12 laboratories on five continents, where we can be immersed in regional challenges. These labs are collaboration hubs where more than 3,000 researchers cross-pollinate ideas that lead to major breakthroughs.
+    </ParagraphRow>
+  </div>
+
+  <div class="content-grid cds--grid">
+    <ParagraphRow title="The Simons Laufer Mathematical Sciences Institute" lg={lg} noMarginTop>
+      <cds-link href="https://www.slmath.org/">The Simons Laufer Mathematical Sciences Institute</cds-link> (SLMath), formerly known as MSRI, is a landmark of US and world collaborative mathematical research. Over 1,700 mathematical scientists spend time at SLMath’s Berkeley, California headquarters each year. It is a place where breakthroughs are made, research areas are created, and brilliant careers are launched. SLMath education and outreach programs and film production for public television reach millions worldwide. The Institute has been supported since its origins by the National Science Foundation, joined by other government agencies, private foundations, corporations, individual donors, and over 100 academic institutions.
+    </ParagraphRow>
+  </div>
+
+  <div class="content-grid cds--grid">
+    <ParagraphRow title="Duality Group" lg={lg} noMarginTop>
+      <cds-link href="https://dualitygroup.com/">Duality Group</cds-link> is a set of companies driven by proprietary machine learning architectures developed to address the specific challenges of time series. Our culture is built around the goal of pushing the brave pursuit of transformative ideas while preserving the creative brew that makes breakthroughs possible.
+    </ParagraphRow>
+  </div>
+</Layout>
+
+<style>
+  @media(min-width: 20rem) {
+    ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4rem;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    #ibm {
+      height: 54px;
+    }
+
+    #slmath {
+      height: 76px;
+    }
+
+    #duality-group {
+      height: 52px;
+    }
+  }
+
+  @media(min-width: 42rem) {
+    ul {
+      flex-direction: row;
+      align-items: center;
+      gap: unset;
+      margin-top: 8rem;
+      margin-bottom: 8rem;
+      justify-content: space-between;
+      max-width: 82rem;
+    }
+
+    #ibm {
+      height: 48px;
+    }
+
+    #slmath {
+      height: 68px;
+    }
+
+    #duality-group {
+      height: 46px;
+    }
+  }
+
+  @media(min-width: 82rem) {
+    #ibm {
+      height: 82px;
+    }
+
+    #slmath {
+      height: 118px;
+    }
+
+    #duality-group {
+      height: 80px;
+    }
+  }
+</style>

@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="overlay">
+    <img class="mark" src="/hf-mark.svg" />
+  </div>
+  <img
+    src="bear-mountain-bridge.webp"
+    alt="The Bear Mountain Bridge"
+  />
+</div>
+
+<style>
+  .container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mark {
+    height: 32%;
+    width: auto;
+    margin-right: 5%;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+</style>

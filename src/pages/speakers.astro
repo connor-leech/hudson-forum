@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeadingGrid from "../components/grid/HeadingGrid.astro";
+import Speaker from "../components/Speaker.astro";
+
+import { speakers } from "../meta/speakers";
+---
+
+<Layout title="Speakers - Hudson Forum">
+  <HeadingGrid>Speakers</HeadingGrid>
+
+  <div id="speakers-grid" class="cds--grid">
+    <div class="speakers-row cds--row">
+      {speakers.map((speaker) => (
+        <div class="cds--col cds--col-sm-4 cds--col-md-4 cds--col-lg-4 cds--col-xlg-4 cds--col-max-4">
+          <Speaker speaker={speaker} />
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>
+
+<style>
+  #speakers-grid {
+    margin-top: 4rem;
+  }
+
+  .speakers-row {
+    grid-row-gap: 4rem;
+  }
+</style>

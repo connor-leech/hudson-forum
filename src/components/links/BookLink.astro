@@ -1,0 +1,32 @@
+---
+import arrowUpRightIcon from "../../icons/arrow--up-right.svg?raw";
+
+interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<c4d-link-with-icon href={href}>
+  <span class="short">Book your group rate</span>
+  <span class="long">Book your group rate for Hudson Forum</span>
+
+  <Fragment set:html={arrowUpRightIcon} />
+</c4d-link-with-icon>
+
+<style>
+  .long {
+    display: none;
+  }
+
+  @media(min-width: 42rem) {
+    .short {
+      display: none;
+    }
+
+    .long {
+      display: inline;
+    }
+  }
+</style>

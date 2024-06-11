@@ -22,3 +22,11 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# public
+public/bear-mountain-bridge.webp
+public/speakers/
+public/hosts/
+public/lab-tours/
+public/photos/
+public/reserved-hotels/

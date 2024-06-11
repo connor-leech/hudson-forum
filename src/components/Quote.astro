@@ -1,0 +1,44 @@
+<q><slot /></q>
+
+<style>
+  q {
+    display: inline-block;
+  }
+
+  q::before {
+    position: absolute;
+    margin-left: -0.8ch;
+  }
+
+  @media(min-width: 20rem) {
+    q {
+      font-weight: 400;
+      font-size: 1.25rem;
+      line-height: 1.625rem;
+      margin: 8rem 0;
+    }
+  }
+
+  @media(min-width: 66rem) {
+    q {
+      font-size: 1.5rem;
+      line-height: 1.875rem;
+      margin: 12rem 0;
+    }
+  }
+
+  @media(min-width: 82rem) {
+    q {
+      font-weight: 300;
+      font-size: 1.75rem;
+      line-height: 2.25rem;
+    }
+  }
+
+  @media(min-width: 99rem) {
+    q {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+  }
+</style>

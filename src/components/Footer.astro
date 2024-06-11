@@ -1,0 +1,84 @@
+---
+import { footerLinks } from "../meta/links";
+---
+
+<div id="footer" transition:persist>
+  <div class="cds--grid">
+    <div class="cds--row">
+      <div class="cds--col">
+        <img src="/hf-logo-vertical.svg" />
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-grid-container">
+    <div id="footer-grid" class="cds--grid">
+      <div class="cds--row">
+        <div class="cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-8 cds--col-xlg-6 cds--col-max-5">
+          If you have any questions regarding the event,
+          please send an <span class="no-wrap">e-mail</span>
+          <span class="no-wrap">
+            to
+            <a href= "mailto:hudson.forum@ibm.com">hudson.forum@ibm.com</a>
+          </span>
+        </div>
+        <div class="cds--col cds--col-sm-0 cds--col-md-8 cds--col-lg-8 cds--col-xlg-10 cds--col-max-11">
+          <ul>
+            {footerLinks.map((link) => (
+              <li><a href={link.url}>{link.title}</a></li>
+            ))}
+          </ul>
+        </div>
+        {footerLinks.map((link) => (
+          <div class="cds--col cds--col-sm-2 cds--col-md-0 link--col-sm">
+            <a href={link.url}>{link.title}</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  #footer {
+    margin-top: auto;
+  }
+
+  img {
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    width: 150px;
+    height: auto;
+  }
+
+  #footer-grid-container {
+    background: var(--text-color);
+    color: white;
+  }
+
+  #footer-grid {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  ul {
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .link--col-sm {
+    margin-top: 2rem;
+  }
+
+  @media(min-width: 66rem) {
+    img {
+      margin-top: 12rem;
+      width: 216px;
+    }
+
+    ul {
+      margin-top: 0;
+      justify-content: flex-end;
+    }
+  }
+</style>

@@ -1,0 +1,29 @@
+---
+interface Props {
+  condensed?: boolean;
+}
+
+const { condensed = false } = Astro.props;
+---
+
+<div class="cds--grid">
+  <div class="cds--row">
+    <div class="cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-8 cds--col-xlg-8 cds--col-max-8">
+      <h2 class:list={[{ condensed }]}><slot /></h2>
+    </div>
+  </div>
+</div>
+
+<style>
+  @media(min-width: 20rem) {
+    h2 {
+      margin-bottom: 8rem;
+    }
+  }
+
+  @media(min-width: 66rem) {
+    h2:not(.condensed) {
+      margin-bottom: 12rem;
+    }
+  }
+</style>

@@ -1,0 +1,67 @@
+---
+export interface Props {
+  title: string;
+  inline?: boolean;
+  lg?: {
+    title: number;
+    slot: number;
+  }
+  noMarginTop?: boolean;
+  noMarginTopOnLg?: boolean;
+}
+
+const { title, inline, lg, noMarginTop, noMarginTopOnLg } = Astro.props;
+---
+
+{!inline && (
+  <div class={`cds--col cds--col-sm-4 cds--col-md-6 cds--col-lg-${lg?.title ?? 4} cds--col-xlg-4 cds--col-max-4`}>
+    <h2 class:list={[{ "no-margin-top": noMarginTop }]}>{title}</h2>
+  </div>
+  <div class={`cds--col cds--col-sm-4 cds--col-md-6 cds--col-lg-${lg?.slot ?? 10} cds--col-xlg-8 cds--col-max-7`}>
+    <p><slot /></p>
+  </div>
+)}
+
+{inline && (
+  <div class="cds--col cds--col-sm-4 cds--col-md-6 cds--col-lg-6 cds--col-xlg-6 cds--col-max-6">
+    <h2 class:list={["inline", { "no-margin-top-on-lg": noMarginTopOnLg }]}>{title}</h2>
+    <p><slot /></p>
+  </div>
+)}
+
+<style>
+  @media(min-width: 20rem) {
+    h2 {
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    h2.inline {
+      margin-top: 1rem;
+    }
+
+    h2.no-margin-top {
+      margin-top: 0;
+    }
+  }
+
+  @media(min-width: 42rem) {
+    h2 {
+      margin-top: 4rem;
+    }
+
+    h2.inline {
+      margin-top: 2rem;
+    }
+
+    h2.no-margin-top {
+      margin-top: 0;
+    }
+  }
+
+  @media(min-width: 66rem) {
+    h2.no-margin-top-on-lg {
+      margin-top: 0;
+    }
+  }
+</style>

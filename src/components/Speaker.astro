@@ -1,0 +1,43 @@
+---
+import type { Speaker } from "../meta/speakers";
+
+interface Props {
+  speaker: Speaker;
+}
+
+const { speaker } = Astro.props;
+---
+
+<div>
+  <img class="photo" style={{ objectPosition: speaker.photoPosition }} src={speaker.photo} />
+  <div class="name">{speaker.name}</div>
+  <p class="desc" set:html={speaker.desc} />
+</div>
+
+<style>
+  .photo {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+  }
+
+  .name, .desc {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .name {
+    margin: 2rem 0;
+    font-weight: 600;
+  }
+
+  .desc {
+    font-weight: 400;
+  }
+
+  @media(min-width: 42rem) {
+    .photo {
+      width: calc(75% - 0.5rem);
+    }
+  }
+</style>

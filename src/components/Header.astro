@@ -1,0 +1,71 @@
+---
+import { menuLinks } from "../meta/links";
+---
+
+<cds-header id="header" aria-label="Hudson Forum - header" transition:persist>
+  <cds-header-menu-button
+    button-label-active="Close menu"
+    button-label-inactive="Open menu"
+  ></cds-header-menu-button>
+  <cds-header-name href="/">
+    <a class="header-link" href="/" tabindex="-1">
+      <img id="logo" src="/hf-logo-horizontal.svg">
+    </a>
+  </cds-header-name>
+  <cds-header-nav menu-bar-label="Hudson Forum - header navigation">
+    {menuLinks.map((link) => (
+      <cds-header-nav-item href={link.url}>
+        <a class="header-link" href={link.url} data-astro-prefetch tabindex="-1">{link.title}</a>
+      </cds-header-nav-item>
+    ))}
+  </cds-header-nav>
+</cds-header>
+<cds-side-nav id="side-navigation" aria-label="Side navigation">
+  <cds-side-nav-items style="padding:0;">
+    {menuLinks.map((link) => (
+      <cds-side-nav-link href={link.url}>
+        <a class="side-navigation-link" href={link.url} data-astro-prefetch tabindex="-1">{link.title}</a>
+      </cds-side-nav-link>
+    ))}
+  </cds-side-nav-items>
+</cds-side-nav>
+
+<style is:global>
+  #header, #side-navigation {
+    --cds-border-subtle: var(--hudson-color);
+    --cds-border-interactive: var(--hudson-color);
+    --cds-focus: var(--hudson-color);
+  }
+
+  #logo {
+    height: 20px;
+  }
+
+  .header-link, .side-navigation-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+  }
+
+  .side-navigation-link {
+    display: inline-block;
+    padding: 15px 16px;
+  }
+
+  @media(min-width: 66rem) {
+    #side-navigation {
+      display: none;
+    }
+  }
+</style>
+
+<script is:inline type="module" data-astro-rerun>
+  [
+    [document.querySelectorAll("#header cds-header-nav-item"), "isActive"],
+    [document.querySelectorAll("#side-navigation cds-side-nav-link"), "active"],
+  ].forEach(([elements, attr]) => {
+    elements.forEach((element) => {
+      element[attr] = [element.href, `${element.href}/`].includes(window.location.pathname);
+    });
+  });
+</script>

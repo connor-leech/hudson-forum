@@ -1,0 +1,74 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeadingGrid from "../components/grid/HeadingGrid.astro";
+import IntroGrid from "../components/grid/IntroGrid.astro";
+
+import { hotels } from "../meta/hotels";
+import BookLink from "../components/links/BookLink.astro";
+---
+
+<Layout title="Reserved hotels - Hudson Forum">
+  <HeadingGrid>Reserved hotels</HeadingGrid>
+
+  <IntroGrid>
+    Below are available room blocks the Hudson Forum Team has secured.
+    Please book your room as soon as possible to ensure you obtain the block rate.
+    There will be shuttle service to and from the IBM Research Yorktown Heights.
+  </IntroGrid>
+
+  <div class="cds--grid">
+    <div class="hotel-row cds--row">
+      {hotels.map((hotel, index) => (
+        <div class:list={["hotel-col cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-8 cds--col-xlg-6 cds--col-max-6", { "cds--offset-xlg-2": index % 2 }]}>
+          <a href={hotel.image} data-fancybox="gallery" data-caption={hotel.name}>
+            <img src={hotel.image} />
+          </a>
+          <div class="hotel-detail">
+            <h2>{hotel.name}</h2>
+            <div>
+              <address>
+                {hotel.addressLine1}<br />
+                {hotel.addressLine2}
+              </address>
+            </div>
+            <div>Nightly rate: {hotel.nightlyRate}</div>
+            <div>{hotel.description}</div>
+            <div><BookLink href={hotel.bookingLink} /></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>
+
+<style>
+  @media(min-width: 20rem) {
+    .hotel-row {
+      grid-row-gap: 8rem;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    .hotel-detail > div:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media(min-width: 42rem) {
+    .hotel-detail {
+      width: calc(75% - 0.5rem);
+    }
+  }
+
+  @media(min-width: 66rem) {
+    .hotel-row {
+      grid-row-gap: 12rem;
+    }
+
+    .hotel-detail {
+      width: 100%;
+    }
+  }
+</style>

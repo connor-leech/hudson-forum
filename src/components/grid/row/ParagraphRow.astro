@@ -1,0 +1,18 @@
+---
+import type { Props } from "./col/ParagraphCol.astro";
+import ParagraphCol from "./col/ParagraphCol.astro";
+
+const props = Astro.props;
+---
+
+<div class="cds--row">
+  <ParagraphCol { ...props }>
+    <slot/>
+  </ParagraphCol>
+</div>
+
+<style>
+  .cds--row {
+    align-items: baseline;
+  }
+</style>
