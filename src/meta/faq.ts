@@ -6,13 +6,6 @@ export interface FAQ {
 
 export const simpleFaqs: FAQ[] = [
   {
-    question: ["What is the registration process for the event?"],
-    answer: [
-      "This is an invitation-only event.",
-      "(Check-in will take about 10-15 minutes)",
-    ],
-  },
-  {
     question: ["What is the dress code for the event?"],
     answer: ["Business casual."],
   },
@@ -52,6 +45,7 @@ export const simpleFaqs2: FAQ[] = [
   },
 ];
 
+/*
 export const simpleFaqs3: FAQ[] = [
   {
     question: ["Is a prayer room available?"],
@@ -76,6 +70,7 @@ export const simpleFaqs3: FAQ[] = [
     answer: ["TBD"],
   },
 ];
+*/
 
 interface Airport {
   name: string;
