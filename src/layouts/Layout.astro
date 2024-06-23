@@ -83,6 +83,8 @@ const { title } = Astro.props;
     --subtle-color: #E0E0E0;
     --text-color: #231F20;
     --fancybox-zIndex: 9999;
+
+    font-size: 16px;
   }
 
   body {
@@ -93,9 +95,8 @@ const { title } = Astro.props;
     display: flex;
     flex-direction: column;
     padding-top: var(--header-height);
-    font-size: 16px;
+    line-height: 1.5rem;
     color: var(--text-color);
-    line-height: 24px;
   }
 
   body, .fancybox__container {
