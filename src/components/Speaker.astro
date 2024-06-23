@@ -10,8 +10,8 @@ const { speaker } = Astro.props;
 
 <div>
   <img class="photo" style={{ objectPosition: speaker.photoPosition }} src={speaker.photo} />
-  <div class="name">{speaker.name}</div>
-  <p class="desc" set:html={speaker.desc} />
+  <h3>{speaker.name}</h3>
+  <p set:html={speaker.desc} />
 </div>
 
 <style>
@@ -21,22 +21,12 @@ const { speaker } = Astro.props;
     aspect-ratio: 1 / 1;
   }
 
-  .name, .desc {
-    font-size: 1rem;;
-    line-height: 1.5rem;
-  }
-
-  .name {
+  h3 {
     margin-top: 2rem;
-    font-weight: 600;
-  }
-
-  .desc {
-    font-weight: 400;
   }
 
   @media(min-width: 42rem) {
-    .name {
+    h3 {
       margin-bottom: 2rem;
     }
   }
