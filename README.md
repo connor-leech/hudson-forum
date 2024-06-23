@@ -5,19 +5,29 @@ UI for the Hudson Forum. Created in [Astro](https://astro.build/).
 The following images are to be expected in `public` folder:
 
 ```
-- bear-mountain-bridge.webp
+- public/bear-mountain-bridge.webp
 
-- public/speakers/speakers/eddie-chang.webp
-- public/speakers/speakers/david-cox.webp
-- public/speakers/speakers/jay-gambetta.webp
-- public/speakers/speakers/surya-ganguli.webp
-- public/speakers/speakers/dario-gil.webp
-- public/speakers/speakers/yann-lecun.webp
-- public/speakers/speakers/sriram-raghavan.webp
-- public/speakers/speakers/tess-smidt.webp
-- public/speakers/speakers/tatiana-toro.webp
-- public/speakers/speakers/fyodor-urnov.webp
-- public/speakers/speakers/rafael-yuste.webp
+- public/speakers/dario-gil.webp
+- public/speakers/dario-villani.webp
+- public/speakers/david-cox.webp
+- public/speakers/eddie-chang.webp
+- public/speakers/fyodor-urnov.webp
+- public/speakers/ingrid-daubechies.webp
+- public/speakers/jay-gambetta.webp
+- public/speakers/jerry-chow.webp
+- public/speakers/mandana-arbab.webp
+- public/speakers/michael-biercuk.webp
+- public/speakers/rafael-yuste.webp
+- public/speakers/sabrina-maniscalco.webp
+- public/speakers/sarah-sheldon.webp
+- public/speakers/sek-kathiresan.webp
+- public/speakers/shirley-ho.webp
+- public/speakers/sriram-raghavan.webp
+- public/speakers/surya-ganguli.webp
+- public/speakers/tatiana-toro.webp
+- public/speakers/tess-smidt.webp
+- public/speakers/travis-humble.webp
+- public/speakers/yann-lecun.webp
 
 - public/hosts/hosts/ibm.svg
 - public/hosts/slmath.svg
