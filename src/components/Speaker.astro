@@ -16,7 +16,7 @@ const { speaker } = Astro.props;
 
 <style>
   .photo {
-    width: 100%;
+    width: calc(75% - 0.5rem);
     object-fit: cover;
     aspect-ratio: 1 / 1;
   }
@@ -27,7 +27,7 @@ const { speaker } = Astro.props;
   }
 
   .name {
-    margin: 2rem 0;
+    margin-top: 2rem;
     font-weight: 600;
   }
 
@@ -36,8 +36,8 @@ const { speaker } = Astro.props;
   }
 
   @media(min-width: 42rem) {
-    .photo {
-      width: calc(75% - 0.5rem);
+    .name {
+      margin-bottom: 2rem;
     }
   }
 </style>
