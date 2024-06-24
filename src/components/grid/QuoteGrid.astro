@@ -1,0 +1,25 @@
+---
+import Quote from "../Quote.astro";
+
+interface Props {
+  align: "left" | "right";
+}
+
+const { align } = Astro.props;
+---
+
+<div class="cds--grid">
+  <div class="cds--row">
+    {align === "left" && (
+      <div class="cds--col cds--col-sm-4 cds--col-md-6 cds--col-lg-8 cds--col-xlg-8 cds--col-max-8">
+        <Quote><slot /></Quote>
+      </div>
+    )}
+
+    {align === "right" && (
+      <div class="cds--col cds--col-sm-4 cds--col-md-6 cds--offset-md-2 cds--col-lg-8 cds--offset-lg-8 cds--col-xlg-8 cds--offset-xlg-8 cds--col-max-8 cds--offset-max-8">
+        <Quote><slot /></Quote>
+      </div>
+    )}
+  </div>
+</div>

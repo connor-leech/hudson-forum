@@ -1,0 +1,35 @@
+---
+interface Props {
+  stretch?: boolean;
+  subtle?: boolean;
+}
+
+const { stretch = true, subtle } = Astro.props;
+---
+
+<hr class:list={[{ "no-stretch": !stretch, subtle }]} />
+
+<style>
+  hr {
+    margin: 0;
+    height: 1px;
+    border: none;
+  }
+
+  hr.no-stretch {
+    position: relative;
+  }
+
+  hr::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--hudson-color);
+  }
+
+  hr.subtle::after {
+    background: var(--subtle-color);
+  }
+</style>

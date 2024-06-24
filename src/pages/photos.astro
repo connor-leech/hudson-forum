@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeadingGrid from "../components/grid/HeadingGrid.astro";
+import PhotosGrid from "../components/grid/PhotosGrid.astro";
+import QuoteGrid from "../components/grid/QuoteGrid.astro";
+
+import { photos as photoCollection, quotes } from "../meta/photos";
+---
+
+<Layout title="Photos - Hudson Forum">
+  <HeadingGrid>2022 photos</HeadingGrid>
+
+  {photoCollection.map((collection, index) => (
+    <>
+      <PhotosGrid { ...collection } />
+
+      {quotes[index] && (
+        <QuoteGrid align={index % 2 == 0 ? "left" : "right"}>
+          {quotes[index]}
+        </QuoteGrid>
+      )}
+    </>
+  ))}
+</Layout>

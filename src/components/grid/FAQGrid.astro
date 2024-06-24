@@ -1,0 +1,83 @@
+---
+import type { FAQ } from "../../meta/faq";
+import Line from "../Line.astro";
+
+interface Props {
+  faqs: FAQ[];
+  marginTop?: boolean
+}
+
+const { faqs, marginTop } = Astro.props;
+
+const questionClass =
+  "cds--col cds--col-sm-4 cds--col-md-4 cds--col-lg-4 cds--col-xlg-4 cds--col-max-3";
+
+const answerClass =
+  "cds--col cds--col-sm-4 cds--col-md-4 cds--col-lg-8 cds--col-xlg-6 cds--col-max-6 cds--offset-max-1";
+---
+
+<div class:list={["cds--grid", { "margin-top": marginTop }]}>
+  {faqs.map((faq, faqIndex) => (
+    <>
+      <div class="cds--row">
+        {[faq.question, faq.answer].map((item, itemIndex) => {
+          const Element = itemIndex === 0 ? "h3" : "p";
+          return (
+            <div class={itemIndex === 0 ? questionClass : answerClass}>
+              <Element>
+                {item.map((line, lineIndex) => (
+                  <>
+                    <Fragment>{line}</Fragment>
+                    {(lineIndex !== item.length - 1) && (
+                      <br />
+                    )}
+                  </>
+                ))}
+              </Element>
+            </div>
+          );
+        })}
+      </div>
+
+      {(faqIndex !== faqs.length - 1) && (
+        <div class="cds--row">
+          <div class="line-col cds--col">
+            <Line stretch={false} subtle />
+          </div>
+        </div>
+      )}
+    </>
+  ))}
+</div>
+
+<style>
+  @media(min-width: 20rem) {
+    .cds--grid.margin-top {
+      margin-top: 3rem;
+    }
+
+    h3 {
+      margin-bottom: 1.5rem;
+    }
+
+    .line-col {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  @media(min-width: 42rem) {
+    .cds--grid.margin-top {
+      margin-top: 4rem;
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    .line-col {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+  }
+</style>

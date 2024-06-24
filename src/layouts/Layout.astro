@@ -1,0 +1,241 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
+
+declare global {
+  interface Window {
+    digitalData: any;
+  }
+}
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" transition:animate="none">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/hf-favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="dcterms.date" content="2024-06-08" />
+    <meta name="dcterms.rights" content="© Copyright IBM Corp. 2016" />
+    <meta name="geo.country" content="US" />
+    <meta name="robots" content="index,follow" />
+    <title>{title}</title>
+    <ViewTransitions />
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/fonts.css" />
+    <link rel="stylesheet" href="https://1.www.s81c.com/common/carbon/web-components/tag/latest/themes.css" />
+    <link rel="stylesheet" href="https://1.www.s81c.com/common/carbon/web-components/tag/latest/grid.css" />
+    <script is:inline type="module" src="https://1.www.s81c.com/common/carbon/web-components/version/v2.10.0/ui-shell.min.js"></script>
+    <script is:inline type="module" src="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/version/v2.10.0/link-with-icon.min.js"></script>
+    <script>
+      window.digitalData = {
+        page: {
+          pageInfo: {
+            language: "en-US",
+            ibm: {
+              country: "US",
+              siteID: "IBM-HUDSON-FORUM",
+            },
+          },
+          isDataLayerReady: true,
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  </head>
+  <body class="cds-theme-zone-white">
+    <Header />
+    <div id="container">
+      <slot />
+    </div>
+    <Footer />
+
+    <script is:inline type="module" data-astro-rerun>
+      import { Fancybox } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.esm.js";
+
+      Fancybox.bind('[data-fancybox="gallery"]', {
+        Toolbar: {
+          display: {
+            left: [""],
+            middle: [],
+            right: ["close"],
+          },
+        },
+        Thumbs: {
+          type: "none",
+        },
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --header-height: 48px;
+    --hudson-color: #39DFAA;
+    --subtle-color: #E0E0E0;
+    --text-color: #231F20;
+    --fancybox-zIndex: 9999;
+
+    font-size: 16px;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    min-width: 20rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--header-height);
+    line-height: 1.5rem;
+    color: var(--text-color);
+  }
+
+  body, .fancybox__container {
+    font-family: IBM Plex Sans, Helvetica Neue, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    margin: 0;
+  }
+
+  h1 {
+    font-weight: 300;
+  }
+
+  h2 {
+    font-weight: 400;
+  }
+
+  h3 {
+    font-weight: 600;
+  }
+
+  h3, p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  p {
+    font-weight: 400;
+    margin: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+  }
+
+  ul li {
+    display: inline-block;
+  }
+
+  address {
+    font-style: normal;
+  }
+
+  svg[slot="icon"] {
+    height: 1.25rem;
+  }
+
+  #container {
+    width: 100%;
+    max-width: 99rem;
+    margin: 0 auto;
+  }
+
+  .no-wrap {
+    white-space: nowrap;
+  }
+
+  @media(min-width: 20rem) {
+    h1 {
+      font-size: 2.625rem;
+      line-height: 3.125rem;
+      margin-top: 8rem;
+      margin-bottom: 3rem;
+    }
+
+    h1.condensed {
+      margin-top: 4rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      line-height: 2.25rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .content-grid:not(:last-child) {
+      margin-bottom: 8rem;
+    }
+  }
+
+  @media(min-width: 42rem) {
+    h1 {
+      font-size: 3.375rem;
+      line-height: 4rem;
+      margin-top: 8rem;
+      margin-bottom: 4rem;
+    }
+
+    h1.condensed {
+      margin-top: 4.5rem;
+    }
+
+    h2 {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  @media(min-width: 66rem) {
+    h1, h1.condensed {
+      font-size: 3.75rem;
+      line-height: 4.375rem;
+      margin-top: 12rem;
+      margin-bottom: 4rem;
+    }
+
+    .content-grid:not(:last-child) {
+      margin-bottom: 12rem;
+    }
+  }
+
+  @media(min-width: 82rem) {
+    h1, h1.condensed {
+      font-size: 4.75rem;
+      line-height: 5.375rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  @media(min-width: 99rem) {
+    h1, h1.condensed {
+      font-size: 5.25rem;
+      line-height: 5.875rem;
+    }
+  }
+
+  cds-link {
+    --cds-body-compact-01-font-size: 1rem;
+    --cds-body-compact-01-font-weight: 400;
+    --cds-body-compact-01-line-height: 1.5rem;
+  }
+</style>

@@ -1,0 +1,37 @@
+---
+import type { PhotoCollection } from "../../meta/photos";
+
+interface Props extends PhotoCollection {};
+
+const { title, photos } = Astro.props;
+---
+
+<div class="cds--grid">
+  <div class="cds--row">
+    <div class="cds--col">
+      <h2>{title}</h2>
+    </div>
+  </div>
+
+  <div class="images-row cds--row">
+    {photos.map((src, index) => index < 2 ? (
+      <div class="cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-8 cds--col-xlg-8 cds--col-max-8">
+        <a href={src} data-fancybox="gallery">
+          <img src={src} loading="lazy" />
+        </a>
+      </div>
+    ) : (
+      <div class="cds--col cds--col-sm-4 cds--col-md-4 cds--col-lg-4 cds--col-xlg-4 cds--col-max-4">
+        <a href={src} data-fancybox="gallery">
+          <img src={src} loading="lazy" />
+        </a>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .images-row {
+    grid-row-gap: 2rem;
+  }
+</style>

@@ -1,14 +1,78 @@
 ---
+import Layout from "../layouts/Layout.astro";
 
+import HeroMessage from "../components/hero/HeroMessage.astro";
+import HeroImage from "../components/hero/HeroImage.astro";
+
+import Line from "../components/Line.astro";
+import ParagraphRow from "../components/grid/row/ParagraphRow.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Hudson Forum</title>
-  </head>
-  <body>
-    <h1>Hudson Forum</h1>
-  </body>
-</html>
+<Layout title="Hudson Forum">
+  <div id="top-image-container">
+    <HeroImage />
+  </div>
+
+  <div class="cds--grid">
+    <div class="cds--row">
+      <div class="cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-8 cds--col-xlg-8 cds--col-max-8">
+        <HeroMessage />
+      </div>
+
+      <div id="copy" class="cds--col cds--col-sm-0 cds--col-md-0 cds--col-lg-8 cds--col-xlg-8 cds--col-max-8">
+        <div class="no-visibility">
+          <HeroMessage />
+        </div>
+        <div id="bottom-image-container">
+          <HeroImage />
+        </div>
+      </div>
+    </div>
+
+    <Line />
+  </div>
+
+  <div class="cds--grid">
+    <ParagraphRow title="About the event">
+      Over the past several decades, the digital revolution, underpinned by advances in the mathematical, physical and computer sciences, has generated profound societal and economic transformations. Yet much remains to be accomplished for humankind to achieve its full potential.<br /><br />
+
+      In 2022, Duality Group, The Simons Laufer Mathematical Sciences Institute and IBM partnered to host the inaugural Hudson Forum to convene experts and thinkers to share their vision on the frontiers of science and technology that will have a major impact on society in the coming decades.<br /><br />
+
+      The 2024 Hudson Forum will once again bring leaders from academia, industry, and government together to participate in a dialogue grounded in science. Attendees will have an opportunity to explore the future of these technical domains: artificial intelligence, quantum computing, genetic engineering, and neurotechnology.
+      <br class="optional">
+      This event is by invitation only.
+    </ParagraphRow>
+  </div>
+</Layout>
+
+<style>
+  br.optional {
+    display: none;
+  }
+
+  .no-visibility {
+    visibility: hidden;
+  }
+
+  #copy {
+    position: absolute;
+    width: 50vw;
+    right: 0;
+    padding: 0;
+  }
+
+  #bottom-image-container {
+    position: absolute;
+    inset: 0;
+  }
+
+  @media(min-width: 66rem) {
+    br.optional {
+      display: inline;
+    }
+
+    #top-image-container {
+      display: none;
+    }
+  }
+</style>

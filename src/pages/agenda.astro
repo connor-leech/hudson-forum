@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeadingGrid from "../components/grid/HeadingGrid.astro";
+import IntroGrid from "../components/grid/IntroGrid.astro";
+import Line from "../components/Line.astro";
+
+import { agenda } from "../meta/agenda";
+---
+
+<Layout title="Agenda - Hudson Forum">
+  <HeadingGrid>Agenda</HeadingGrid>
+
+  <IntroGrid condensed>
+    Please Note: This agenda, including times and featured speakers, is subject to change.
+  </IntroGrid>
+
+  <div class="cds--grid">
+    {agenda.map((item, itemIndex) => (
+      <>
+        <div class="agenda-row cds--row">
+          <div class="cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-5 cds--col-xlg-4 cds--col-max-4">
+            <h2>{item.time}</h2>
+          </div>
+
+          <div class="cds--col cds--col-sm-4 cds--col-md-6 cds--col-lg-7 cds--col-xlg-8 cds--col-max-7">
+            {item.events.map((event) => (
+              <div class="event">
+                <h3>{event.title}</h3>
+                {event.speakers && event.speakers.length > 0 && (
+                  <p>{event.speakers.join(", ")}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {(itemIndex !== agenda.length - 1) && (
+          <div class="cds--row">
+            <div class="line-col cds--col">
+              <Line stretch={false} subtle />
+            </div>
+          </div>
+        )}
+      </>
+    ))}
+  </div>
+</Layout>
+
+<style>
+  h2 {
+    margin: 0;
+  }
+
+  .event:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  @media(min-width: 20rem) {
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    .line-col {
+      margin-top: 4rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  @media(min-width: 66rem) {
+    .agenda-row {
+      align-items: baseline;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    .line-col {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+</style>
