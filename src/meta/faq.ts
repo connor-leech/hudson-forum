@@ -229,14 +229,14 @@ export const dinnerPlaces: DinnerPlace[] = [
   },
   {
     name: "MP Taverna",
-    url: "www.mptaverna.com",
+    url: "https://www.mptaverna.com",
     addressLine1: "One Bridge Street",
     addressLine2: "Irvington, NY 10533",
     tel: "914 231 7854",
   },
   {
     name: "Mulino’s",
-    url: "www.mulinosny.com",
+    url: "https://www.mulinosny.com",
     addressLine1: "99 Court Street",
     addressLine2: "White Plains, NY 10601",
     tel: "914 761 1818",
