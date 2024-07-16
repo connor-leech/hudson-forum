@@ -37,11 +37,6 @@ export const speakers: Speaker[] = [
     photo: "/speakers/ingrid-daubechies.webp",
   },
   {
-    name: "Jay Gambetta",
-    desc: "IBM Fellow and Vice President of IBM Quantum",
-    photo: "/speakers/jay-gambetta.webp",
-  },
-  {
     name: "Surya Ganguli",
     desc: "Associate Professor of Applied Physics, Senior Fellow at the Stanford Institute for HAI and Associate Professor, by courtesy, of Neurobiology, Electrical Engineering, and Computer Science. Venture Partner at a16z",
     photo: "/speakers/surya-ganguli.webp",
@@ -75,12 +70,6 @@ export const speakers: Speaker[] = [
     name: "Sabrina Maniscalco",
     desc: "Professor of Quantum Information, Computing and Logic at the University of Helsinki, and CEO and cofounder of Algorithmiq Inc.",
     photo: "/speakers/sabrina-maniscalco.webp",
-  },
-  {
-    name: "Sriram Raghavan",
-    desc: "Vice President, IBM Research AI",
-    photo: "/speakers/sriram-raghavan.webp",
-    photoPosition: "top",
   },
   {
     name: "Sarah Sheldon",
