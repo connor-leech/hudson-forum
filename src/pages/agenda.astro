@@ -10,7 +10,7 @@ import { agenda } from "../meta/agenda";
 <Layout title="Agenda - Hudson Forum">
   <HeadingGrid>Agenda</HeadingGrid>
 
-  <div class="cds--grid">
+  <div class="agenda-grid cds--grid">
     {agenda.map((item, itemIndex) => (
       <>
         <div class="agenda-row cds--row">
@@ -47,12 +47,17 @@ import { agenda } from "../meta/agenda";
 </Layout>
 
 <style>
+  .agenda-grid {
+    margin-top: 1rem;
+  }
+
   h2 {
     margin: 0;
+    zoom: 0.9;
   }
 
   .event:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   @media(min-width: 20rem) {
@@ -61,23 +66,19 @@ import { agenda } from "../meta/agenda";
     }
 
     .line-col {
-      margin-top: 4rem;
-      margin-bottom: 3rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
   }
 
   @media(min-width: 66rem) {
-    .agenda-row {
-      align-items: baseline;
-    }
-
     h2 {
       margin: 0;
     }
 
     .line-col {
-      margin-top: 3rem;
-      margin-bottom: 3rem;
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
     }
   }
 </style>

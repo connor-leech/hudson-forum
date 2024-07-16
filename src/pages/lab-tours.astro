@@ -69,7 +69,7 @@ import ParagraphRow from "../components/grid/row/ParagraphRow.astro";
   </div>
 
   <div class="content-grid cds--grid">
-    <div class="image-and-inline-paragraph-row cds--row">
+    <div class="image-and-inline-paragraph-row no-gap cds--row">
       <div class="cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-14 cds--col-xlg-14 cds--col-max-14">
         <a href="/lab-tours/06-figures.webp" data-fancybox="gallery">
           <img class="possibly-4-3-ratio possibly-16-9-ratio" src="/lab-tours/06-figures.webp" loading="lazy" />
@@ -84,11 +84,15 @@ import ParagraphRow from "../components/grid/row/ParagraphRow.astro";
 </Layout>
 
 <style>
-  .image-and-inline-paragraph-row {
-    grid-row-gap: 2rem;
+  img {
+    max-height: 500px;
   }
 
   @media(min-width: 20rem) {
+    .image-and-inline-paragraph-row {
+      grid-row-gap: 0.5rem;
+    }
+
     .possibly-4-3-ratio, .a-4-3-ratio {
       aspect-ratio: 4 / 3;
       object-fit: cover;
@@ -96,6 +100,10 @@ import ParagraphRow from "../components/grid/row/ParagraphRow.astro";
   }
 
   @media(min-width: 66rem) {
+    .image-and-inline-paragraph-row {
+      grid-row-gap: 2rem;
+    }
+
     .possibly-4-3-ratio {
       aspect-ratio: auto;
       object-fit: fill;
@@ -110,5 +118,9 @@ import ParagraphRow from "../components/grid/row/ParagraphRow.astro";
     #heron-shot-col {
       order: 99;
     }
+  }
+
+  .no-gap {
+    grid-row-gap: unset;
   }
 </style>

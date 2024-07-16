@@ -73,6 +73,14 @@ import { hotels, additionalHotels } from "../meta/hotels";
 </Layout>
 
 <style>
+  h2 {
+    margin-top: 1rem;
+  }
+
+  img {
+    max-height: 400px;
+  }
+
   .additional-hotels-grid {
     margin-top: 4rem;
   }
@@ -85,15 +93,15 @@ import { hotels, additionalHotels } from "../meta/hotels";
 
   @media(min-width: 20rem) {
     .hotel-row {
-      grid-row-gap: 8rem;
+      grid-row-gap: 6rem;
     }
 
     h2 {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
 
     .hotel-detail > div:not(:last-of-type) {
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
   }
 
@@ -104,10 +112,6 @@ import { hotels, additionalHotels } from "../meta/hotels";
   }
 
   @media(min-width: 66rem) {
-    .hotel-row {
-      grid-row-gap: 12rem;
-    }
-
     .hotel-detail {
       width: 100%;
     }
