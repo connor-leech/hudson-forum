@@ -208,13 +208,6 @@ export const dinnerPlaces: DinnerPlace[] = [
     tel: "914 764 1400",
   },
   {
-    name: "Harvest on Hudson",
-    url: "https://www.harvesthudson.com",
-    addressLine1: "1 River Street",
-    addressLine2: "Hastings-on-Hudson, NY 10706",
-    tel: "914 478 2800",
-  },
-  {
     name: "Lexington Square Cafe",
     url: "http://www.lexingtonsquarecafe.com",
     addressLine1: "510 Lexington Avenue",
