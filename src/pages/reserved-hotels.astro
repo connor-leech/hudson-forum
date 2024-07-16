@@ -28,6 +28,10 @@ import BookLink from "../components/links/BookLink.astro";
                 {hotel.addressLine1}<br />
                 {hotel.addressLine2}
               </address>
+              <div>
+                <span>Phone: </span>
+                <cds-link href={`tel:${hotel.tel}`}>{hotel.tel}</cds-link>
+              </div>
             </div>
             <div>Nightly rate: {hotel.nightlyRate}</div>
             <div>{hotel.description}</div>
