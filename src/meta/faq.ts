@@ -70,10 +70,12 @@ export const simpleFaqs3: FAQ[] = [
     question: ["Is the event ADA compliant?"],
     answer: ["Yes"],
   },
-  // {
-  //   question: ["What is the emergency contact on the day of the event?"],
-  //   answer: ["TBD"],
-  // },
+  {
+    question: ["What is the emergency contact on the day of the event?"],
+    answer: [
+      'Reception desk in the lobby <cds-link href="tel:914 945 1614">914 945 1614</cds-link>',
+    ],
+  },
 ];
 
 interface Airport {

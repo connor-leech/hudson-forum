@@ -27,7 +27,7 @@ const answerClass =
               <Element>
                 {item.map((line, lineIndex) => (
                   <>
-                    <Fragment>{line}</Fragment>
+                    <Fragment set:html={line} />
                     {(lineIndex !== item.length - 1) && (
                       <br />
                     )}
