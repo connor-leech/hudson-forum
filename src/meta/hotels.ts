@@ -50,3 +50,27 @@ export const hotels: Hotel[] = [
       "https://www.marriott.com/event-reservations/reservation-link.mi?id=1717082825016&key=GRP&app=resvlink",
   },
 ];
+
+interface AdditionalHotel {
+  name: string;
+  url: string;
+  away: string;
+}
+
+export const additionalHotels: AdditionalHotel[] = [
+  {
+    name: "The Castle Hotel and Spa",
+    url: "https://www.castlehotelandspa.com/",
+    away: "14 miles away",
+  },
+  {
+    name: "The Abbey Inn & Spa",
+    url: "https://www.theabbeyinn.com/",
+    away: "14 miles away",
+  },
+  {
+    name: "Crabtree's Kittle House",
+    url: "https://www.crabtreeskittlehouse.com/",
+    away: "6 miles away",
+  },
+];
