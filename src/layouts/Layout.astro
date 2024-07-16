@@ -163,23 +163,26 @@ const { title } = Astro.props;
     h1 {
       font-size: 2.625rem;
       line-height: 3.125rem;
-      margin-top: 8rem;
-      margin-bottom: 3rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+
+      /* Make smaller */
+      zoom: 0.7;
     }
 
     h1.condensed {
-      margin-top: 4rem;
+      margin-top: 2rem;
     }
 
     h2 {
       font-size: 1.75rem;
       line-height: 2.25rem;
-      margin-top: 3rem;
-      margin-bottom: 3rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
 
     .content-grid:not(:last-child) {
-      margin-bottom: 8rem;
+      margin-bottom: 3rem;
     }
   }
 
@@ -187,17 +190,17 @@ const { title } = Astro.props;
     h1 {
       font-size: 3.375rem;
       line-height: 4rem;
-      margin-top: 8rem;
-      margin-bottom: 4rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
 
     h1.condensed {
-      margin-top: 4.5rem;
+      margin-top: 2rem;
     }
 
     h2 {
-      margin-top: 4rem;
-      margin-bottom: 4rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
   }
 
@@ -205,12 +208,16 @@ const { title } = Astro.props;
     h1, h1.condensed {
       font-size: 3.75rem;
       line-height: 4.375rem;
-      margin-top: 12rem;
-      margin-bottom: 4rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+
+      /* Make smaller */
+      margin-bottom: 2rem;
+      margin-top: 2rem;
     }
 
     .content-grid:not(:last-child) {
-      margin-bottom: 12rem;
+      margin-bottom: 6rem;
     }
   }
 
@@ -222,7 +229,7 @@ const { title } = Astro.props;
 
     h2 {
       font-size: 2rem;
-      line-height: 2.5rem;
+      line-height: 2rem;
     }
   }
 

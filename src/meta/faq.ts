@@ -10,6 +10,12 @@ export const simpleFaqs: FAQ[] = [
     answer: ["Business casual."],
   },
   {
+    question: ["What is the registration process for the event?"],
+    answer: [
+      "This is an invitation-only event. Please have a valid form of ID for check in. Guest will be giving a name badge that will need to be worn while in the building.",
+    ],
+  },
+  {
     question: ["Where does event take place?"],
     answer: [
       "IBM Thomas J. Watson Research Center",
@@ -31,7 +37,7 @@ export const simpleFaqs: FAQ[] = [
   {
     question: ["Will there be a shuttle from my hotel?"],
     answer: [
-      "There will be a shuttle from the three preferred hotels: Westchester Marriott, Sheraton Tarrytown Hotel, and The Opus Westchester. The shuttles will depart the hotels at 8:30am and return at various times during the reception.",
+      "There will be a shuttle from the three preferred hotels: Westchester Marriott, Sheraton Tarrytown Hotel, and The Opus Westchester. The shuttles will depart the hotels at 7:45am & 8:00am. Shuttle leads will be in the lobby of each hotel to direct guest to the shuttles. Return shuttles will begin at 5:00pm and the last shuttle will be departing the reception at 7:30pm.",
     ],
   },
 ];
@@ -45,32 +51,32 @@ export const simpleFaqs2: FAQ[] = [
   },
 ];
 
-/*
 export const simpleFaqs3: FAQ[] = [
-  {
-    question: ["Is a prayer room available?"],
-    answer: ["TBD"],
-  },
-  {
-    question: ["Will I be able to check my bag during the event?"],
-    answer: ["Yes, we will have a secure area where you can leave baggage."],
-  },
-  {
-    question: ["Is a lactation room available?"],
-    answer: [
-      "There is a lactation room near the auditorium where talks will be held.",
-    ],
-  },
+  // {
+  //   question: ["Is a prayer room available?"],
+  //   answer: ["TBD"],
+  // },
+  // {
+  //   question: ["Will I be able to check my bag during the event?"],
+  //   answer: ["Yes, we will have a secure area where you can leave baggage."],
+  // },
+  // {
+  //   question: ["Is a lactation room available?"],
+  //   answer: [
+  //     "There is a lactation room near the auditorium where talks will be held.",
+  //   ],
+  // },
   {
     question: ["Is the event ADA compliant?"],
-    answer: ["TBD"],
+    answer: ["Yes"],
   },
   {
     question: ["What is the emergency contact on the day of the event?"],
-    answer: ["TBD"],
+    answer: [
+      'Reception desk in the lobby <cds-link href="tel:914 945 1614">914 945 1614</cds-link>',
+    ],
   },
 ];
-*/
 
 interface Airport {
   name: string;
@@ -172,11 +178,6 @@ export const reservedHotelRoomBlocks: HotelRoomBlock[] = [
     away: "11 miles away",
   },
   {
-    name: "Hampton Inn White Plains Tarrytown",
-    url: "http://hamptoninn3.hilton.com/en/hotels/new-york/hampton-inn-white-plains-tarrytown-ELMNYHX/index.html",
-    away: "12 miles away",
-  },
-  {
     name: "Sonesta White Plains Downtown",
     url: "https://www.sonesta.com/sonesta-hotels-resorts/ny/white-plains/sonesta-white-plains-downtown",
     away: "13 miles away",
@@ -205,13 +206,6 @@ export const dinnerPlaces: DinnerPlace[] = [
     addressLine1: "258 Westchester Avenue",
     addressLine2: "Pound Ridge, NY 10576",
     tel: "914 764 1400",
-  },
-  {
-    name: "Harvest on Hudson",
-    url: "https://www.harvesthudson.com",
-    addressLine1: "1 River Street",
-    addressLine2: "Hastings-on-Hudson, NY 10706",
-    tel: "914 478 2800",
   },
   {
     name: "Lexington Square Cafe",

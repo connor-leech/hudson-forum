@@ -2,24 +2,22 @@
 import Layout from "../layouts/Layout.astro";
 import HeadingGrid from "../components/grid/HeadingGrid.astro";
 import IntroGrid from "../components/grid/IntroGrid.astro";
-
-import { hotels } from "../meta/hotels";
 import BookLink from "../components/links/BookLink.astro";
+
+import { hotels, additionalHotels } from "../meta/hotels";
 ---
 
 <Layout title="Reserved hotels - Hudson Forum">
   <HeadingGrid>Reserved hotels</HeadingGrid>
 
   <IntroGrid>
-    Below are available room blocks the Hudson Forum Team has secured.
-    Please book your room as soon as possible to ensure you obtain the block rate.
-    There will be shuttle service to and from the IBM Research Yorktown Heights.
+    Event hotels with negotiated rate.
   </IntroGrid>
 
   <div class="cds--grid">
     <div class="hotel-row cds--row">
       {hotels.map((hotel, index) => (
-        <div class:list={["hotel-col cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-8 cds--col-xlg-6 cds--col-max-6", { "cds--offset-xlg-2": index % 2 }]}>
+        <div class:list={["hotel-col cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-5 cds--col-xlg-5 cds--col-max-5"]}>
           <a href={hotel.image} data-fancybox="gallery" data-caption={hotel.name}>
             <img src={hotel.image} />
           </a>
@@ -30,29 +28,80 @@ import BookLink from "../components/links/BookLink.astro";
                 {hotel.addressLine1}<br />
                 {hotel.addressLine2}
               </address>
+              <div>
+                <span>Phone: </span>
+                <cds-link href={`tel:${hotel.tel}`}>{hotel.tel}</cds-link>
+              </div>
             </div>
             <div>Nightly rate: {hotel.nightlyRate}</div>
             <div>{hotel.description}</div>
-            <div><BookLink href={hotel.bookingLink} /></div>
+            <div>
+              <BookLink
+                href={hotel.bookingLink}
+                deadline={hotel.bookingDeadline}
+              />
+            </div>
           </div>
         </div>
       ))}
     </div>
   </div>
+
+  <div class="additional-hotels-grid cds--grid">
+    <div class="cds--row">
+      <div class="cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-8 cds--col-xlg-8 cds--col-max-8">
+        There will be a shuttle service to and from the Hudson Forum from these three hotels.
+        The shuttles will depart the hotels at 7:45am and 8:00am.
+        Shuttle leads will be in the lobby of each hotel to direct guest to the shuttles.
+        Return shuttles will begin at 5:00pm and the last shuttle will be departing the reception at 7:30pm.
+        <br /><br />
+        In addition to the three reserved hotels, here are some other nearby hotels:
+      </div>
+
+      <div class="cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-8 cds--col-xlg-12 cds--col-max-12">
+        <ul class="grid-list">
+          {additionalHotels.map((hotel) => (
+            <li>
+              <cds-link href={hotel.url}>{hotel.name}</cds-link>
+              <div>{hotel.away}</div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
 </Layout>
 
 <style>
+  h2 {
+    margin-top: 1rem;
+  }
+
+  img {
+    max-height: 400px;
+  }
+
+  .additional-hotels-grid {
+    margin-top: 4rem;
+  }
+
+  .grid-list {
+    margin-top: 1rem;
+    flex-direction: row;
+    grid-column-gap: 2rem;
+  }
+
   @media(min-width: 20rem) {
     .hotel-row {
-      grid-row-gap: 8rem;
+      grid-row-gap: 6rem;
     }
 
     h2 {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
 
     .hotel-detail > div:not(:last-of-type) {
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
   }
 
@@ -63,10 +112,6 @@ import BookLink from "../components/links/BookLink.astro";
   }
 
   @media(min-width: 66rem) {
-    .hotel-row {
-      grid-row-gap: 12rem;
-    }
-
     .hotel-detail {
       width: 100%;
     }

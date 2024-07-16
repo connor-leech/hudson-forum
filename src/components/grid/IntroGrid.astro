@@ -17,13 +17,16 @@ const { condensed = false } = Astro.props;
 <style>
   @media(min-width: 20rem) {
     h2 {
-      margin-bottom: 8rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
   }
 
   @media(min-width: 66rem) {
     h2:not(.condensed) {
-      margin-bottom: 12rem;
+      margin-bottom: 2rem;
     }
   }
 </style>

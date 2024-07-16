@@ -7,7 +7,7 @@ import Line from "../components/Line.astro";
 import {
   simpleFaqs,
   simpleFaqs2,
-  // simpleFaqs3,
+  simpleFaqs3,
   nearbyAirports,
   closestTrainStations,
   taxisOrLimos,
@@ -70,9 +70,9 @@ import {
             </li>
           ))}
         </ul>
-        <p>Taxi service is available from both stations.</p>
-        <br />
         <cds-link href="https://new.mta.info/schedules?tab=mnr">Metro North schedule</cds-link>
+        <br />
+        <p>Taxi service is available from both stations.</p>
       </div>
     </div>
   </div>
@@ -128,7 +128,7 @@ import {
       </div>
       <div class="cds--col cds--col-sm-4 cds--col-md-4 cds--col-lg-8 cds--col-xlg-6 cds--col-max-6 cds--offset-max-1">
         <p>
-          If you anticipate needing to charge an EV, please contact us to reserve a spot at a charging station by emailing <cds-link href="mailto:hudson.forum@ibm.com">hudson.forum@ibm.com</cds-link>.
+          If you anticipate needing to charge an EV, please contact us to reserve a spot at a charging station by emailing <cds-link href="mailto:hudson.forum@ibm.com">hudson.forum@ibm.com</cds-link>
         </p>
       </div>
     </div>
@@ -142,7 +142,7 @@ import {
     </div>
   </div>
 
-  <!-- <FAQGrid faqs={simpleFaqs3} />
+  <FAQGrid faqs={simpleFaqs3} />
 
   <div class="cds--grid">
     <div class="cds--row">
@@ -150,7 +150,7 @@ import {
         <Line stretch={false} subtle />
       </div>
     </div>
-  </div> -->
+  </div>
 
   <div class="cds--grid">
     <div class="cds--row">
@@ -236,8 +236,8 @@ import {
     }
 
     .line-col {
-      margin-top: 3rem;
-      margin-bottom: 3rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
 
     .grid-list {
@@ -255,15 +255,10 @@ import {
       margin-bottom: 0;
     }
 
-    .line-col {
-      margin-top: 4rem;
-      margin-bottom: 4rem;
-    }
-
     .grid-list {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-row-gap: 3rem;
+      grid-row-gap: 2rem;
       grid-column-gap: 2rem;
       margin-top: 3rem;
     }
