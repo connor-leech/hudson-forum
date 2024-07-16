@@ -178,11 +178,6 @@ export const reservedHotelRoomBlocks: HotelRoomBlock[] = [
     away: "11 miles away",
   },
   {
-    name: "Hampton Inn White Plains Tarrytown",
-    url: "http://hamptoninn3.hilton.com/en/hotels/new-york/hampton-inn-white-plains-tarrytown-ELMNYHX/index.html",
-    away: "12 miles away",
-  },
-  {
     name: "Sonesta White Plains Downtown",
     url: "https://www.sonesta.com/sonesta-hotels-resorts/ny/white-plains/sonesta-white-plains-downtown",
     away: "13 miles away",
