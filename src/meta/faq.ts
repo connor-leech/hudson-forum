@@ -10,6 +10,12 @@ export const simpleFaqs: FAQ[] = [
     answer: ["Business casual."],
   },
   {
+    question: ["What is the registration process for the event?"],
+    answer: [
+      "This is an invitation-only event. Please have a valid form of ID for check in. Guest will be giving a name badge that will need to be worn while in the building.",
+    ],
+  },
+  {
     question: ["Where does event take place?"],
     answer: [
       "IBM Thomas J. Watson Research Center",
