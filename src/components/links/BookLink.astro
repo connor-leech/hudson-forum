@@ -3,14 +3,15 @@ import arrowUpRightIcon from "../../icons/arrow--up-right.svg?raw";
 
 interface Props {
   href: string;
+  deadline?: string;
 }
 
-const { href } = Astro.props;
+const { href, deadline } = Astro.props;
 ---
 
 <c4d-link-with-icon href={href}>
   <span class="short">Book your group rate</span>
-  <span class="long">Book your group rate for Hudson Forum</span>
+  <span class="long">Book your group rate for Hudson Forum{deadline ? ` ${deadline}` : ""}</span>
 
   <Fragment set:html={arrowUpRightIcon} />
 </c4d-link-with-icon>

@@ -35,7 +35,12 @@ import BookLink from "../components/links/BookLink.astro";
             </div>
             <div>Nightly rate: {hotel.nightlyRate}</div>
             <div>{hotel.description}</div>
-            <div><BookLink href={hotel.bookingLink} /></div>
+            <div>
+              <BookLink
+                href={hotel.bookingLink}
+                deadline={hotel.bookingDeadline}
+              />
+            </div>
           </div>
         </div>
       ))}
