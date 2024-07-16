@@ -51,32 +51,30 @@ export const simpleFaqs2: FAQ[] = [
   },
 ];
 
-/*
 export const simpleFaqs3: FAQ[] = [
-  {
-    question: ["Is a prayer room available?"],
-    answer: ["TBD"],
-  },
-  {
-    question: ["Will I be able to check my bag during the event?"],
-    answer: ["Yes, we will have a secure area where you can leave baggage."],
-  },
-  {
-    question: ["Is a lactation room available?"],
-    answer: [
-      "There is a lactation room near the auditorium where talks will be held.",
-    ],
-  },
+  // {
+  //   question: ["Is a prayer room available?"],
+  //   answer: ["TBD"],
+  // },
+  // {
+  //   question: ["Will I be able to check my bag during the event?"],
+  //   answer: ["Yes, we will have a secure area where you can leave baggage."],
+  // },
+  // {
+  //   question: ["Is a lactation room available?"],
+  //   answer: [
+  //     "There is a lactation room near the auditorium where talks will be held.",
+  //   ],
+  // },
   {
     question: ["Is the event ADA compliant?"],
-    answer: ["TBD"],
+    answer: ["Yes"],
   },
-  {
-    question: ["What is the emergency contact on the day of the event?"],
-    answer: ["TBD"],
-  },
+  // {
+  //   question: ["What is the emergency contact on the day of the event?"],
+  //   answer: ["TBD"],
+  // },
 ];
-*/
 
 interface Airport {
   name: string;
