@@ -17,7 +17,7 @@ import BookLink from "../components/links/BookLink.astro";
   <div class="cds--grid">
     <div class="hotel-row cds--row">
       {hotels.map((hotel, index) => (
-        <div class:list={["hotel-col cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-8 cds--col-xlg-6 cds--col-max-6", { "cds--offset-xlg-2": index % 2 }]}>
+        <div class:list={["hotel-col cds--col cds--col-sm-4 cds--col-md-8 cds--col-lg-5 cds--col-xlg-5 cds--col-max-5"]}>
           <a href={hotel.image} data-fancybox="gallery" data-caption={hotel.name}>
             <img src={hotel.image} />
           </a>
