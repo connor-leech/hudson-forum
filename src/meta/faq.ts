@@ -37,7 +37,7 @@ export const simpleFaqs: FAQ[] = [
   {
     question: ["Will there be a shuttle from my hotel?"],
     answer: [
-      "There will be a shuttle from the three preferred hotels: Westchester Marriott, Sheraton Tarrytown Hotel, and The Opus Westchester. The shuttles will depart the hotels at 8:30am and return at various times during the reception.",
+      "There will be a shuttle from the three preferred hotels: Westchester Marriott, Sheraton Tarrytown Hotel, and The Opus Westchester. The shuttles will depart the hotels at 7:45am & 8:00am. Shuttle leads will be in the lobby of each hotel to direct guest to the shuttles. Return shuttles will begin at 5:00pm and the last shuttle will be departing the reception at 7:30pm.",
     ],
   },
 ];
