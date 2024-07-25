@@ -102,4 +102,9 @@ export const speakers: Speaker[] = [
     desc: "Professor of Biological Sciences and Director of the Neurotechnology Center at Columbia University. He is also Chairman of the Neurorights Foundation.",
     photo: "/speakers/rafael-yuste.webp",
   },
+  {
+    name: "Alex Rives",
+    desc: "Chief scientist and co-founder of EvolutionaryScale, and MIT assistant professor in the Dep’t of Electrical Engineering and Computer Science",
+    photo: "/speakers/alex-rives.webp",
+  },
 ];
