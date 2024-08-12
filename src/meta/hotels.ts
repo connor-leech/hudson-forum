@@ -22,7 +22,7 @@ export const hotels: Hotel[] = [
       "Located in Tarrytown, the Sheraton Hotel offers modern common areas and onsite Starbucks. This hotel is 20 minutes from the Hudson Forum at the IBM Watson Research Center. Shuttle service will be provided to and from the hotel on Tuesday September 10th.",
     bookingLink:
       "https://www.marriott.com/event-reservations/reservation-link.mi?id=1716993819464&key=GRP&app=resvlink",
-    bookingDeadline: "BY AUGUST 8TH",
+    bookingDeadline: "BY AUGUST 23",
   },
   {
     image: "/reserved-hotels/westchester-marriott.webp",
@@ -35,7 +35,7 @@ export const hotels: Hotel[] = [
       "Located in Tarrytown, the recently renovated Marriott hotel thoughtfully considered each detail in the design and has onsite Ruth’s Chris Steak House. This hotel is 20 minutes from the Hudson Forum at the IBM Watson Research Center. Shuttle service will be provided to and from the hotel on Tuesday September 10th.",
     bookingLink:
       "https://www.marriott.com/event-reservations/reservation-link.mi?id=1717074063620&key=GRP&app=resvlink",
-    bookingDeadline: "BY AUGUST 8TH",
+    bookingDeadline: "BY AUGUST 23",
   },
   {
     image: "/reserved-hotels/the-opus-westchester-autograph-collection.webp",
@@ -48,6 +48,7 @@ export const hotels: Hotel[] = [
       "Part of the Autograph collection, the Opus Westchester is located in White Plains. This hotel is 20 minutes from the Hudson Forum at the IBM Watson Research Center. Shuttle service will be provided to and from the hotel on Tuesday September 10th.",
     bookingLink:
       "https://www.marriott.com/event-reservations/reservation-link.mi?id=1717082825016&key=GRP&app=resvlink",
+      bookingDeadline: "BY AUGUST 16",
   },
 ];
 
