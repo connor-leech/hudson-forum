@@ -45,7 +45,7 @@ export const hotels: Hotel[] = [
     tel: "914 946 5500",
     nightlyRate: "$415",
     description:
-      "Part of the Autograph collection, the Opus Westchester is located in White Plains. This hotel is 20 minutes from the Hudson Forum at the IBM Watson Research Center. Shuttle service will be provided to and from the hotel on Tuesday, September 10.",
+      "Part of the Autograph collection, the Opus Westchester is located in White Plains. This hotel is 20 minutes from the Hudson Forum at the IBM Watson Research Center. Shuttle service will be provided to and from the hotel on Tuesday, September 10. Shuttles will depart at 7:30 am & 7:50 am",
     bookingLink:
       "mailto:hudson.forum@ibm.com",
       bookingDeadline: "by contacting us at hudson.forum@ibm.com.",
