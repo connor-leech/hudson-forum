@@ -19,10 +19,10 @@ export const hotels: Hotel[] = [
     tel: "914 332 7900",
     nightlyRate: "$175",
     description:
-      "Located in Tarrytown, the Sheraton Hotel offers modern common areas and onsite Starbucks. This hotel is 20 minutes from the Hudson Forum at the IBM Watson Research Center. Shuttle service will be provided to and from the hotel on Tuesday September 10th.",
+      "Located in Tarrytown, the Sheraton Hotel offers modern common areas and onsite Starbucks. This hotel is 20 minutes from the Hudson Forum at the IBM Watson Research Center. Shuttle service will be provided to and from the hotel on Tuesday, September 10. Shuttles will depart at 7:40 am & 8:00 am.",
     bookingLink:
       "https://www.marriott.com/event-reservations/reservation-link.mi?id=1716993819464&key=GRP&app=resvlink",
-    bookingDeadline: "BY AUGUST 23",
+    bookingDeadline: "by September 5",
   },
   {
     image: "/reserved-hotels/westchester-marriott.webp",
@@ -32,10 +32,10 @@ export const hotels: Hotel[] = [
     tel: "914 631 2200",
     nightlyRate: "$186",
     description:
-      "Located in Tarrytown, the recently renovated Marriott hotel thoughtfully considered each detail in the design and has onsite Ruth’s Chris Steak House. This hotel is 20 minutes from the Hudson Forum at the IBM Watson Research Center. Shuttle service will be provided to and from the hotel on Tuesday September 10th.",
+      "Located in Tarrytown, the recently renovated Marriott hotel thoughtfully considered each detail in the design and has onsite Ruth’s Chris Steak House. This hotel is 20 minutes from the Hudson Forum at the IBM Watson Research Center. Shuttle service will be provided to and from the hotel on Tuesday, September 10. Shuttles will depart at 7:40 am & 8:15 am.",
     bookingLink:
       "https://www.marriott.com/event-reservations/reservation-link.mi?id=1717074063620&key=GRP&app=resvlink",
-    bookingDeadline: "BY AUGUST 23",
+    bookingDeadline: "by August 30",
   },
   {
     image: "/reserved-hotels/the-opus-westchester-autograph-collection.webp",
@@ -45,10 +45,10 @@ export const hotels: Hotel[] = [
     tel: "914 946 5500",
     nightlyRate: "$415",
     description:
-      "Part of the Autograph collection, the Opus Westchester is located in White Plains. This hotel is 20 minutes from the Hudson Forum at the IBM Watson Research Center. Shuttle service will be provided to and from the hotel on Tuesday September 10th.",
+      "Part of the Autograph collection, the Opus Westchester is located in White Plains. This hotel is 20 minutes from the Hudson Forum at the IBM Watson Research Center. Shuttle service will be provided to and from the hotel on Tuesday, September 10.",
     bookingLink:
-      "https://www.marriott.com/event-reservations/reservation-link.mi?id=1717082825016&key=GRP&app=resvlink",
-      bookingDeadline: "BY AUGUST 16",
+      "mailto:hudson.forum@ibm.com",
+      bookingDeadline: "by contacting us at hudson.forum@ibm.com.",
   },
 ];
 

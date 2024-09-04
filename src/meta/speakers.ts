@@ -42,6 +42,11 @@ export const speakers: Speaker[] = [
     photo: "/speakers/surya-ganguli.webp",
   },
   {
+    name: "Talia Gershon",
+    desc: "Director, Hybrid Cloud Infrastructure Research",
+    photo: "/speakers/talia-gershon.webp",
+  },
+  {
     name: "Darío Gil",
     desc: "IBM Senior Vice President and Director of Research",
     photo: "/speakers/dario-gil.webp",
@@ -104,7 +109,7 @@ export const speakers: Speaker[] = [
   },
   {
     name: "Alex Rives",
-    desc: "Chief scientist and co-founder of EvolutionaryScale, and MIT assistant professor in the Dep’t of Electrical Engineering and Computer Science",
+    desc: "Alex Rives, co-founder and chief scientist, EvolutionaryScale",
     photo: "/speakers/alex-rives.webp",
   },
 ];
