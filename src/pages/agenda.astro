@@ -23,7 +23,10 @@ import { agenda } from "../meta/agenda";
               <div class="event">
                 <h3>{event.title}</h3>
                 {event.speakers && event.speakers.length > 0 && (
-                  <p>{event.speakers.join(", ")}</p>
+                  <p><em>{event.speakers.join(", ")}</em></p>
+                )}
+                {event.description && event.description.length > 0 && (
+                  <p>{event.description}</p>
                 )}
               </div>
             ))}
