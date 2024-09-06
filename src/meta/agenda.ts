@@ -141,7 +141,7 @@ export const agenda: AgendaItem[] = [
     time: "4:45 PM",
     events: [
       {
-        title: "Surprise guest",
+        title: "A brief diversion",
       },
     ],
   },
