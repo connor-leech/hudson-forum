@@ -77,6 +77,11 @@ export const speakers: Speaker[] = [
     photo: "/speakers/sabrina-maniscalco.webp",
   },
   {
+    name: "Kiran Musunuru",
+    desc: "Professor of Cardiovascular Medicine and Genetics in the Perelman School of Medicine at the University of Pennsylvania",
+    photo: "/speakers/kiran-musunuru.webp",
+  },
+  {
     name: "Sarah Sheldon",
     desc: "IBM Senior Manager, Quantum Theory and Capabilities",
     photo: "/speakers/sarah-sheldon.webp",
