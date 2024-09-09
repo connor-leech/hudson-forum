@@ -62,11 +62,6 @@ export const speakers: Speaker[] = [
     photo: "/speakers/travis-humble.webp",
   },
   {
-    name: "Sek Kathiresan",
-    desc: "Chief Executive Officer, Verve Therapeutics",
-    photo: "/speakers/sek-kathiresan.webp",
-  },
-  {
     name: "Yann LeCun",
     desc: "Vice President & Chief AI Scientist at Meta and Silver Professor at NYU",
     photo: "/speakers/yann-lecun.webp",

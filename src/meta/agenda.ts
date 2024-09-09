@@ -63,7 +63,7 @@ export const agenda: AgendaItem[] = [
     events: [
       {
         title: "Gene-Edited Human Beings Are a Clinical Reality. What Happens Next?",
-        speakers: ["Fyodor Urnov", "Mandana Arbab", "Sek Kathiresan"],
+        speakers: ["Fyodor Urnov", "Mandana Arbab"],
       },
     ],
   },
